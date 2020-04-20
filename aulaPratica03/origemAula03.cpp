@@ -9,7 +9,7 @@ int main() {
 	float vetorExercicio1[4	];
 	float vetorExercicio2[3], mediaExercicio2;
 	int linha, coluna, matriz[2][2];
-	int linhaExercicio4 = 0, colunaExercicio4 = 0;
+	int linhaExercicio4, colunaExercicio4;
 	int matrizE[2][3] = {{0, 3, 6},{8, 4, 2}};
 	float matrizF[2][3] = {{2.2, 1.6, 2.6},{0.4, 3.1, 6.4}};
 	float resultado[2][3];
@@ -60,7 +60,7 @@ int main() {
 	printf("Imprimindo a matriz: \n");
 	for (linha = 0; linha < 2; linha++) {
 		for (coluna = 0; coluna < 2; coluna++) {
-			printf("%.2f", matriz[linha][coluna]);
+			printf("%d", matriz[linha][coluna]);
 			printf("\t");
 			}
 		printf("\n");
@@ -71,6 +71,15 @@ int main() {
 
 
 	printf("---------EXERCÍCIO 04 - AULA PRATICA 03------------------\n");
+
+	
+	for (linhaExercicio4 = 0; linhaExercicio4 < 2; linhaExercicio4++) {
+		for (colunaExercicio4 = 0; colunaExercicio4 < 3; colunaExercicio4++) {
+			resultado[linhaExercicio4][colunaExercicio4] = { matrizE[linhaExercicio4][colunaExercicio4] + matrizF[linhaExercicio4][colunaExercicio4]}; 
+		}
+		
+	}
+	
 
 	printf("Exibindo a Primeira Matriz: \n");
 	for (linhaExercicio4 = 0; linhaExercicio4 < 2; linhaExercicio4++) {
@@ -93,26 +102,15 @@ int main() {
 	}
 	printf("\n");
 
-
 	printf("Exibindo a Soma das Matrizes: \n");
 	for (linhaExercicio4 = 0; linhaExercicio4 < 2; linhaExercicio4++) {
 		for (colunaExercicio4 = 0; colunaExercicio4 < 3; colunaExercicio4++) {
-			resultado = { matrizE[linhaExercicio4][colunaExercicio4] + matrizF[linhaExercicio4][colunaExercicio4] };
 			printf("%.2f", resultado[linhaExercicio4][colunaExercicio4]);
 			printf("\t");
 		}
 		printf("\n");
 	}
 	printf("\n");
-
-
-
-
-
-
-
-
-	printf("---------EXERCÍCIO 05 - AULA PRATICA 03------------------\n");
 
 	system("pause");
 	return 0;
